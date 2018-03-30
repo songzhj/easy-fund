@@ -1,6 +1,9 @@
 # config file
 config.py
 
+# fund
+all_fund_detail
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
