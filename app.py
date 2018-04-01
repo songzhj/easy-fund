@@ -13,5 +13,8 @@ def beauty_print(data):
 
 valuation_url = config.URL['VALUATION']
 for fund in config.FUND_LIST:
-    percent = json.loads(crawler.get(valuation_url % (fund[0])))['data']['items'][-1]['percentage']
-    beauty_print((fund[1], percent))
+    try:
+        percent = json.loads(crawler.get(valuation_url % (fund[0])))['data']['items'][-1]['percentage']
+        beauty_print((fund[1], percent))
+    except:
+        print('%s\t|    -' % fund[1])
